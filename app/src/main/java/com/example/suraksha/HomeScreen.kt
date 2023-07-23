@@ -15,13 +15,18 @@ class HomeScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_screen)
         val bottom_nav = findViewById<BottomNavigationView>(R.id.bottom_nav)
-        bottom_nav.setOnItemSelectedListener { menuItem ->
-            if (menuItem.itemId == R.id.nav_guard)
-                inflateFragment(GuardFragment.newInstance())
-            else if (menuItem.itemId == R.id.nav_home)
-                inflateFragment(HomeFragment.newInstance())
+
+        bottom_nav.setOnItemSelectedListener{ menuItem ->
+            when (menuItem.itemId)
+            {
+                R.id.nav_home -> inflateFragment(HomeFragment.newInstance())
+                R.id.nav_dashboard-> inflateFragment(DashboardFragment.newInstance())
+                R.id.nav_guard -> inflateFragment(GuardFragment.newInstance())
+                R.id.nav_profile -> inflateFragment(ProfileFragment.newInstance())
+            }
             true
         }
+        bottom_nav.selectedItemId = R.id.nav_home
     }
 
     private fun inflateFragment(fragment: Fragment) {

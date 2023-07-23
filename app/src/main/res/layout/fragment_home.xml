@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/activity_background_color"
     tools:context=".HomeFragment">
 
@@ -15,89 +15,59 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/guideline_home_hori"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline_home_hori1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/image_home_location"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_home_hori"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="25dp"
         android:layout_marginLeft="25dp"
         android:src="@drawable/ic_home_location"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/guideline_home_hori1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/image_home_dots"
         android:layout_width="30dp"
         android:layout_height="40dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_home_hori"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:src="@drawable/ic_home_dots"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/guideline_home_hori1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_home_hori"
+        android:id="@+id/guideline_home_hori1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.1" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_1"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_family_member"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        app:cardCornerRadius="16dp"
-        app:cardBackgroundColor="@color/white"
-        app:strokeColor="@color/white"
-        app:cardElevation="@dimen/card_elvation_dimes"
-        app:layout_constraintTop_toBottomOf="@+id/guideline_home_hori" />
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/guideline_home_hori1"
+        app:layout_constraintBottom_toTopOf="@+id/card_invite_family_member"
+        tools:listitem="@layout/family_member" />
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_2"
+        android:id="@+id/card_invite_family_member"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        app:cardCornerRadius="16dp"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toBottomOf="@+id/rv_family_member"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="16dp"
         app:cardBackgroundColor="@color/white"
-        app:strokeColor="@color/white"
-        app:cardElevation="@dimen/card_elvation_dimes"
-        app:layout_constraintTop_toBottomOf="@+id/card_1" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_3"
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
         app:cardCornerRadius="16dp"
-        app:cardBackgroundColor="@color/white"
-        app:strokeColor="@color/white"
         app:cardElevation="@dimen/card_elvation_dimes"
-        app:layout_constraintTop_toBottomOf="@+id/card_2" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_invite_member"
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        app:cardCornerRadius="16dp"
-        app:cardBackgroundColor="@color/white"
-        app:strokeColor="@color/white"
-        app:cardElevation="@dimen/card_elvation_dimes"
-        app:layout_constraintTop_toBottomOf="@+id/card_3" />
+        app:strokeColor="@color/white" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
