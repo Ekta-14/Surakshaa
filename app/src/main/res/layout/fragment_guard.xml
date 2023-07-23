@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background_color">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SECURITY"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_guard_hori"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_guard_hori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_red"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:cardBackgroundColor="#ed7079"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="@dimen/card_elvation_dimes"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_guard_hori" />
+
+    <TextView
+        android:id="@+id/text_sos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="@dimen/other_elevation_dims"
+        android:letterSpacing="0.05"
+        android:text="SOS"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/card_red"
+        app:layout_constraintTop_toTopOf="@+id/card_red" />
+
+    <TextView
+        android:id="@+id/text_Sos_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:elevation="@dimen/other_elevation_dims"
+        android:text="@string/sos_description"
+        android:textColor="#ECA7AC"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@+id/card_red"
+        app:layout_constraintRight_toLeftOf="@+id/image_sos"
+        app:layout_constraintTop_toBottomOf="@+id/text_sos" />
+
+    <ImageView
+        android:id="@+id/image_sos"
+        android:layout_width="123dp"
+        android:layout_height="129dp"
+        android:layout_marginTop="48dp"
+        android:elevation="@dimen/other_elevation_dims"
+        android:src="@drawable/ic_sos"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_green"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="16dp"
+        app:cardBackgroundColor="#63d2c7"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="@dimen/card_elvation_dimes"
+        app:layout_constraintTop_toBottomOf="@+id/card_red" />
+
+    <TextView
+        android:id="@+id/text_guard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="@dimen/other_elevation_dims"
+        android:letterSpacing="0.05"
+        android:text="GUARD"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/card_green"
+        app:layout_constraintTop_toTopOf="@+id/card_green" />
+
+    <TextView
+        android:id="@+id/text_guard_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:elevation="@dimen/other_elevation_dims"
+        android:text="@string/guard_description"
+        android:textColor="#BADDDA"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@+id/card_green"
+        app:layout_constraintRight_toLeftOf="@+id/image_guard"
+        app:layout_constraintTop_toBottomOf="@+id/text_guard" />
+
+    <ImageView
+        android:id="@+id/image_guard"
+        android:layout_width="123dp"
+        android:layout_height="129dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="8dp"
+        android:elevation="@dimen/other_elevation_dims"
+        android:src="@drawable/ic_guard_card"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_red" />
+
+    <!--<com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_bar_items"
+        app:itemIconTint="@drawable/nav_icon_color"
+        app:itemTextColor="#63d2c7"
+        />
+-->
+</androidx.constraintlayout.widget.ConstraintLayout>

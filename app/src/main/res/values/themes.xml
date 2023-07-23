@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Suraksha" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#adb5bd</item>
+        <item name="colorPrimaryVariant">#d8d5db</item>
+    </style>
+
+    <style name="Theme.Suraksha" parent="Base.Theme.Suraksha" />
+</resources>
