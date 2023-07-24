@@ -27,15 +27,16 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val memberList = listOf<MemberModel>(
-            MemberModel("Ekta"),
-            MemberModel("Lavanya Jain"),
-            MemberModel("Josh"),
-            MemberModel("Arushi"),
-            MemberModel("Neeta"),
-            MemberModel("Manish"),
-            MemberModel("Arushi"),
-            MemberModel("Arushi"),
-            MemberModel("Ekta")
+
+            MemberModel("Ekta Jain",R.drawable.ic_family_member_f,"94%","6M","WiFi","20:06"),
+            MemberModel("Josh",R.drawable.ic_family_member_m,"65%","23K","4G","05:09"),
+            MemberModel("Jack",R.drawable.ic_family_member_m,"94%","2K","WiFi","12:09"),
+            MemberModel("Arushi Sharma",R.drawable.ic_family_member_f,"87%","1000","No Signal","06:56"),
+            MemberModel("Leetika Gupta",R.drawable.ic_family_member_f,"67%","32K","WiFi","19:09"),
+            MemberModel("Manish Kumar",R.drawable.ic_family_member_m,"23%","45M","Wifi","15:09"),
+            MemberModel("Divya Gupta",R.drawable.ic_family_member_f,"29%","560","4G","21:09"),
+            MemberModel("Menika Jha",R.drawable.ic_family_member_f,"100%","1K","4G","20:15"),
+            MemberModel("Kartik Gupta",R.drawable.ic_family_member_m,"55%","447K","Wifi","12:11")
         )
 
         val adapter = MemberAdapter(memberList)

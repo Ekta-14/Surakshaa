@@ -12,9 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Suraksha"
         tools:targetApi="31">
-        <activity
-            android:name=".example"
-            android:exported="false" />
+
         <activity
             android:name=".HomeScreen"
             android:exported="true">
@@ -25,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GuardScreen"
+            android:name=".GuardFragment"
             android:exported="true" />
     </application>
 
